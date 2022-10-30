@@ -1,0 +1,23 @@
+{
+  "name": "lab1-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Exercise1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3xul/lab1-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b3xul/lab1-node/issues"
+  },
+  "homepage": "https://github.com/b3xul/lab1-node#readme",
+  "dependencies": {
+    "dayjs": "^1.10.4",
+    "sqlite3": "^5.0.2"
+  }
+}

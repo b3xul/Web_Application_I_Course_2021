@@ -1,0 +1,117 @@
+# List Tasks
+GET http://localhost:3001/api/tasks
+
+# List Filtered Tasks
+### Empty
+GET http://localhost:3001/api/tasks:filter/
+
+###
+GET http://localhost:3001/api/tasks:filter/All
+
+###
+GET http://localhost:3001/api/tasks:filter/Today
+
+###
+GET http://localhost:3001/api/tasks:filter/Important
+
+###
+GET http://localhost:3001/api/tasks:filter/Private
+
+###
+GET http://localhost:3001/api/tasks:filter/Next 7 Days
+
+### Invalid
+GET http://localhost:3001/api/tasks:filter/zxcvbnm
+
+# Get a Task
+###
+GET http://localhost:3001/api/tasks/5
+
+### Not present
+GET http://localhost:3001/api/tasks/99
+
+### Invalid
+GET http://localhost:3001/api/tasks/a
+
+### Villain
+GET http://localhost:3001/api/tasks/'
+
+# Create a Task
+###
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+
+{ "description": "fare una torta", "important":true, "private":false, "deadline":"2021-08-06 08:30", "completed":false, "user":1 }
+
+### Wrong parameters
+POST http://localhost:3001/api/tasks
+Content-Type: application/json
+
+{ ....  }
+
+# Update a Task
+### Empty
+PUT http://localhost:3001/api/tasks/
+Content-Type: application/json
+
+{"description": "Watch the new lecture", "important":true, "private":false, "deadline":"", "completed":false, "user":1}
+
+###
+PUT http://localhost:3001/api/tasks/5
+Content-Type: application/json
+
+{"description": "Watch the new lecture", "important":true, "private":false, "deadline":"", "completed":false, "user":1}
+
+### Wrong parameters
+PUT http://localhost:3001/api/tasks
+Content-Type: application/json
+
+{ ....  }
+
+### Not present
+PUT http://localhost:3001/api/tasks/99
+Content-Type: application/json
+
+{"description": "Watch the new lecture", "important":true, "private":false, "deadline":"", "completed":false, "user":1}
+
+# Mark a Task as completed/uncompleted
+### Empty
+PATCH http://localhost:3001/api/tasks/
+Content-Type: application/json
+
+{"completed":true}
+
+###
+PATCH http://localhost:3001/api/tasks/5
+Content-Type: application/json
+
+{"completed":true}
+
+###
+PATCH http://localhost:3001/api/tasks/5
+Content-Type: application/json
+
+{"completed":false}
+
+
+### Wrong parameters
+PATCH http://localhost:3001/api/tasks
+Content-Type: application/json
+
+{ ....  }
+
+### Not present
+PATCH http://localhost:3001/api/tasks/99
+Content-Type: application/json
+
+{"description": "Watch the new lecture", "important":true, "private":false, "deadline":"", "completed":false, "user":1}
+
+# Delete a Task
+### Empty
+DELETE  http://localhost:3001/api/tasks
+
+###
+DELETE http://localhost:3001/api/tasks/11
+
+### Not present
+DELETE http://localhost:3001/api/tasks/99

@@ -1,0 +1,17 @@
+body {
+    background-color: honeydew;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+#scorestable {
+    color: navy;
+}
+
+td:hover {
+    color:red;
+}
+
+header h1 { background-color: palegreen;}

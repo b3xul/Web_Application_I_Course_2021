@@ -1,0 +1,39 @@
+/* Element selector: applies the style to all instances of a specific element */
+body {
+    /* property:value */
+    background-color: rgb(32, 228, 32);
+    background-color: #f0fff0 !important; /* !important overrides other rules */
+}
+
+/* applies the style to all instances of h1 elements inside an header:
+   S1 S2: s2 nested in s1
+   S1,S2: s1 union s2
+   S1>S2: S2 if a child of S1
+   S1+S2: S2 if it comes immediately after S1
+   S1~S2: s2 if later than s1 */
+header h1 {
+    background-color: palegreen;
+}
+
+/* Class selector: applies the style to all elements belonging to a specific defined class */
+.highlight {
+    background-color: yellow;
+}
+
+/* ID selector: applies the style to a specific element */
+#scorestable {
+    color: navy;
+}
+
+/* Attribute selector: applies the style to all elements with a target attribute (attribute matching various regex
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+   Internal links, beginning with "#" */
+a[href^="#"] {
+    color: gold;
+}
+
+/* Pseudo selector: applies the style to elements, based on information not related to the structure of the document (status)
+   :link (unvisited), :visited, :hover, :active, :focus */
+td:hover {
+    color:red;
+}

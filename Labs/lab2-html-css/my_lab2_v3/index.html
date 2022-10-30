@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>My To Do Manager WebApp</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Custom CSS for this GUI-->
+    <link rel="stylesheet" href="GUIStyle.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Navigation -->
+        <nav class=" navbar navbar-expand-sm navbar-dark bg-primary fixed-top">
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toToggle" aria-controls="toToggle" aria-expanded="false" aria-label="Toggle searchbar and sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- ToDo Manager Logo and writing -->
+            <a class="navbar-brand" href="#" id="App_Logo_and_Name">
+                <svg id="To_Do_Manager_Logo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-check-all" viewBox="0 0 16 16" alt="To Do Manager Logo">
+                    <path
+                        d="M8.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14l.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
+
+                </svg>
+                ToDoManager
+            </a>
+
+            <!-- User Icon -->
+            <div class="navbar-nav order-sm-4 ml-sm-auto">
+                <a class="nav-item nav-link" href="#">
+                    <svg id="User_Icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" alt="User Icon">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- SearchBar -->
+            <form class="collapse navbar-collapse order-sm-3 mr-sm-3" id="toToggle">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="Search_Form">
+            </form>
+
+        </nav>
+    </header>
+
+    <!-- Content of the page -->
+    <div class='container-fluid'>
+        <div class="row" id="two_column_section">
+
+            <!-- Left sidebar -->
+            <aside class="col-12 col-sm-4 collapse d-sm-block below-nav" id="toToggle">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">All</a>
+                    <a href="#" class="list-group-item list-group-item-action">Important</a>
+                    <a href="#" class="list-group-item list-group-item-action">Today</a>
+                    <a href="#" class="list-group-item list-group-item-action">Next 7 Days</a>
+                    <a href="#" class="list-group-item list-group-item-action">Private</a>
+                </div>
+            </aside>
+
+            <!-- Main content -->
+            <main class="col-12 col-sm-8 below-nav">
+                <div class='container-fluid d-flex flex-column h-100'>
+                    <header class="row">
+                        <h1>All</h1>
+                    </header>
+
+                    <!-- List of tasks -->
+                    <ul class="list-group list-group-flush row" id="tasks">
+
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="col-8 custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check-t1">
+                                    <label class="custom-control-label important" for="check-t1">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua.</label>
+                                </div>
+                                <div class="col-4">
+                                    Monday 22 march 2021 at 14:30
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="col-7 custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check-t2">
+                                    <label class="custom-control-label important" for="check-t2">
+                                        Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo
+                                        consequat.
+                                    </label>
+                                </div>
+                                <div class="col-1">
+                                    <svg id='Share_icon' xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                    </svg>
+                                </div>
+                                <div class="col-4">
+                                    Today at 15:30
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="col-12 custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check-t3">
+                                    <label class="custom-control-label important" for="check-t3">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                        eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                        eu fugiat nulla pariatur.
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="col-11 custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check-t4">
+                                    <label class="custom-control-label important" for="check-t4">
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                        eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                        eu fugiat nulla pariatur.
+                                    </label>
+                                </div>
+                                <div class="col-1">
+                                    <svg id='Share_icon' xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="col-11 custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="check-t4">
+                                    <label class="custom-control-label important" for="check-t4">
+                                        ciao
+                                    </label>
+                                </div>
+                                <div class="col-1">
+                                    <svg id='Share_icon' xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Add a new task -->
+                    <footer class="row mt-auto mb-3 justify-content-end">
+                        <a href="#">
+                            <svg id="add_note_icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#007bff" class="bi bi-plus-circle-fill" viewBox="0 0 16 16" alt="Add Note Button">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                            </svg>
+                        </a>
+                        <div class="col d-none d-sm-none d-md-none d-lg-none d-xl-none">
+                            Ciao curiosone!
+                        </div>
+                    </footer>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>

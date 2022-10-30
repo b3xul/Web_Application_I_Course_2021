@@ -1,0 +1,27 @@
+#To_Do_Manager_Logo,#User_Icon{
+    fill: var(--light);
+}
+#App_Logo_and_Name{
+    min-width: 11rem;
+}
+#Search_Form{
+    width: 100% !important;
+}
+#add_note_icon, #Users_icon{
+    fill: var(--primary);
+}
+/*.container-fluid {
+    min-height: 100vh;
+}*/
+#two_column_section{
+    min-height: 92vh;
+}
+.flex-fill {
+    flex:1 1 auto;
+}
+aside{
+    background-color: #e3f2fd;
+}
+.important{
+    color:red;
+}

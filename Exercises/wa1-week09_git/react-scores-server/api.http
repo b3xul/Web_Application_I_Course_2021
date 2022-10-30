@@ -1,0 +1,19 @@
+GET http://localhost:3000/api/courses
+
+###
+GET http://localhost:3000/api/coursesss
+Content-Type: text/plain
+
+the body goes here
+
+###
+
+GET http://localhost:3000/api/courses/02LSEOV
+
+
+###
+
+POST http://localhost:3000/api/exams 
+Content-Type: application/json
+
+{ "code": "33abcde", "score": 21, "date": "2021-08-06" }

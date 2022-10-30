@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <title>My To Do Manager WebApp</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Custom CSS for this GUI-->
+    <link rel="stylesheet" href="GUIStyle.css">
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <header>
+            <!-- Navigation -->
+            <nav class="row navbar navbar-expand-md navbar-dark bg-primary">
+
+                <!-- Order everything as it would be in the smaller screen, than set different orders for bigger screens:
+                     from medium sized screens put the user as-->
+
+                <!-- Toggler -->
+                <button class="navbar-toggler navbar-toggler-icon col col-1" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive">
+                </button>
+
+                <!-- ToDo Manager Logo and writing -->
+
+                <a class="navbar-brand col col-4 order-md-1" href="#" id="App_Logo_and_Name">
+                    <svg id="To_Do_Manager_Logo" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        class="bi bi-check-all" viewBox="0 0 16 16" alt="To Do Manager Logo">
+                        <path
+                            d="M8.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L2.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093L8.95 4.992a.252.252 0 0 1 .02-.022zm-.92 5.14l.92.92a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 1 0-1.091-1.028L9.477 9.417l-.485-.486-.943 1.179z" />
+
+                    </svg>
+                    <span>ToDoManager</span>
+                </a>
+
+                <!-- User Icon -->
+                <div class="col col-1 order-md-3 d-flex justify-content-end">
+                    <div class="navbar-brand ">
+                        <a href="#">
+                            <svg id="User_Icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" alt="User Icon">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SearchBar -->
+                <form class="form-inline collapse navbar-collapse col order-md-2" id="navbarResponsive">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search" id="Search_Form">
+                </form>
+
+
+
+            </nav>
+        </header>
+        <!-- Two column section (flex-fill?) -->
+        <div class="row " id="two_column_section">
+
+            <aside class="col d-none d-sm-none d-md-block">
+                <div class="mt-3" id="sidebar">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action active">All</li>
+                        <li class="list-group-item list-group-item-action">Important</li>
+                        <li class="list-group-item list-group-item-action">Today</li>
+                        <li class="list-group-item list-group-item-action">Next 7 Days</li>
+                        <li class="list-group-item list-group-item-action">Private</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="col-md-8">
+                <div class='container-fluid d-flex flex-column h-100'>
+                    <header class="row">
+                        <h1>All</h1>
+                    </header>
+
+                    <ul class="list-group row" id="tasks">
+                        <li class="list-group-item">
+                            <div class="row row-cols-3">
+                                <div class="form-check col-6">
+                                    <input type="checkbox" class="form-check-input" id="completed_checkbox">
+                                    <label class="form-check-label" for="completion">
+
+                                        <p class="description important">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="col-1">
+                                    <!--
+                                            <svg id='Users_icon' xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                            </svg>-->
+                                </div>
+                                <div class="col-4">
+                                    Monday 22 march 2021 at 14:30
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="form-check col-6">
+                                    <input type="checkbox" class="form-check-input" id="completed_checkbox">
+                                    <label class="form-check-label" for="completion">
+
+                                        <p class="description">
+                                            Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo
+                                            consequat.
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="col-1">
+                                    <svg id='Users_icon' xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                    </svg>
+                                </div>
+                                <div class="col-4">
+                                    Today at 15:30
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item">
+                            <div class="row d-flex justify-content-between row-cols-3">
+                                <div class="form-check col-6">
+                                    <input type="checkbox" class="form-check-input" id="completed_checkbox">
+                                    <label class="form-check-label" for="completion">
+
+                                        <p class="description">
+                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                            eu fugiat nulla pariatur.
+                                        </p>
+                                    </label>
+                                </div>
+                                <div class="col-1 private">
+
+                                </div>
+                                <div class="col-4">
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <footer class="row mt-auto mb-3 justify-content-end">
+                        <a href="#">
+                            <svg id="add_note_icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                fill="#007bff" class="bi bi-plus-circle-fill" viewBox="0 0 16 16" alt="Add Note Button">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                            </svg>
+                        </a>
+                        <div class="col d-none d-sm-none d-md-none d-lg-none d-xl-none">
+                            Ciao curiosone!
+                        </div>
+                    </footer>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

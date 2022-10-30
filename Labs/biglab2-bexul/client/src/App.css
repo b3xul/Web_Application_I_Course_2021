@@ -1,0 +1,64 @@
+/* Custom colors and size for icons and text*/
+#User_Icon{
+  fill: var(--light);
+}
+.Share_icon{
+  fill: var(--primary);
+}
+#new_task_icon{
+  cursor: pointer;
+  fill: var(--primary);
+}
+#new_task_icon_disabled{
+  fill: #d3d3d3;
+}
+.Pencil_icon{
+  cursor: pointer;
+  fill: var(--warning);
+}
+.Pencil_icon_disabled{
+  fill: black;
+}
+.Trash_icon{
+  cursor: pointer;
+  fill: var(--danger);
+}
+.Trash_icon_disabled{
+  fill: black;
+}
+.important{
+  color:red;
+}
+#td_icons{
+  min-width: 60px;
+}
+
+/* Custom sections colors */
+#aside_section{
+  background-color: #e3f2fd;
+}
+.list-group-item:hover {
+  color: white;
+  background-color: rgb(152, 208, 236);
+}
+.list-group-item.active {
+  background-color: var(--primary);
+}
+a{
+  color:black !important;
+  text-decoration: none !important;
+}
+
+/* Padding tweaks */
+#aside_section, #main_section, #error_section, #login_section {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (max-width: 575.5px) {
+  #aside_section {
+      padding-top: 7rem;
+  }
+  .closer_main{
+      padding-top: 1rem !important;
+  }
+}

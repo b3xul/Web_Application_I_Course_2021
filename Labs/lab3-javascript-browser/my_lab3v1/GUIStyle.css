@@ -1,0 +1,46 @@
+/* Custom colors for the icons */
+#To_Do_Manager_Logo,#User_Icon{
+    fill: var(--light);
+}
+
+#add_note_icon, #Share_icon{
+    fill: var(--primary);
+}
+
+/*#App_Logo_and_Name{
+    min-width: 11rem;   -> used only if navbar is managed using col instead of proper navbars elements
+}
+#Search_Form{
+    width: 100% !important; -> used only if form is managed using form-inline class
+}*/
+
+#two_column_section{
+    min-height: 100vh;   
+}
+
+aside, main {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+}
+@media only screen and (max-width: 575.5px) {
+    aside {
+        padding-top: 7rem;
+    }
+    .closer_main{
+        padding-top: 1rem;
+    }
+}
+
+aside{
+    background-color: #e3f2fd;
+}
+
+.list-group-item-action:hover {
+    background-color: rgb(152, 208, 236);
+}
+.list-group-item.active {
+    background-color: var(--primary);
+}
+.important{
+    color:red;
+}
